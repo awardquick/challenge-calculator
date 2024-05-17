@@ -4,17 +4,19 @@ namespace Calculator365
 {
     public class BasicCalculator : ICalculator
     {
-        public (double result, string formula) Add(string? input)
+        public double Add(string? input)
         {
             if (string.IsNullOrWhiteSpace(input))
-                return (0, "");
+                return 0;
 
             var delimiters = GetDelimiters(ref input);
             var numbers = GetNumbers(input, delimiters);
+            var formula = BuildFormula(input, numbers);
 
             ValidateNumbers(numbers);
-            var (result, formula) = CalculateResultAndFormula(numbers);
-            return (result, formula);
+            var result = numbers.Sum();
+            Console.WriteLine($"{formula} = {result}");
+            return result;
         }
 
         private IEnumerable<double> GetNumbers(string input, string[] delimiters)

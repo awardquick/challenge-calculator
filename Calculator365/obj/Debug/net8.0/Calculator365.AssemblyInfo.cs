@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Calculator365")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f2623a694115ddb05cab09b0687d33b3c753962d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+de49fdee6c56d850a8dca7b5d6effef5d2ed9f3b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Calculator365")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Calculator365")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
