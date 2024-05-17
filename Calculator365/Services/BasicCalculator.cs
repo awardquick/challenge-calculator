@@ -9,19 +9,16 @@ namespace Calculator365
 
             string[] numbers = input.Split(',');
 
-            if (numbers.Length > 2)
-                throw new ArgumentException("More than 2 numbers provided");
+            double sum = 0;
 
-            double num1 = 0;
-            double num2 = 0;
-
-            if (numbers.Length >= 1 && double.TryParse(numbers[0], out double parsedNum1))
-                num1 = parsedNum1;
-
-            if (numbers.Length == 2 && double.TryParse(numbers[1], out double parsedNum2))
-                num2 = parsedNum2;
-
-            return num1 + num2;
+            foreach (string number in numbers)
+            {
+                if (double.TryParse(number, out double parsedNum))
+                    sum += parsedNum;
+                else
+                    sum += 0;
+            }
+            return sum;
         }
     }
 }

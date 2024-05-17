@@ -17,8 +17,8 @@ namespace Calculator365.UnitTest
         public void TestAddition()
         {
             // Arrange
-            string input = "1,2";
-            double expected = 3;
+            string input = "1,2,3,4,5,6,7,8,9,10,11,12";
+            double expected = 78;
 
             // Act
             double result = _calculator.Add(input);
@@ -34,15 +34,15 @@ namespace Calculator365.UnitTest
             Assert.That(expected, Is.EqualTo(_calculator.Add(input)));
         }
 
-        [Test]
-        public void TestMoreThanTwoNumbers()
-        {
-            // Arrange
-            string input = "1,2,3";
+        // [Test]
+        // public void TestMoreThanTwoNumbers()
+        // {
+        //     // Arrange
+        //     string input = "1,2,3";
 
-            // Act & Assert
-            Assert.Throws<ArgumentException>(() => _calculator.Add(input));
-        }
+        //     // Act & Assert
+        //     Assert.DoesNotThrow<ArgumentException>(() => _calculator.Add(input));
+        // }
 
         [Test]
         public void TestEmptyInput()
