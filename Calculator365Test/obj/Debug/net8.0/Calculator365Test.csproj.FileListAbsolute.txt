@@ -1,0 +1,7 @@
+/Users/histakes/Desktop/codingprojects/Calculator365/Calculator365Test/bin/Debug/net8.0/CoverletSourceRootsMapping_Calculator365Test
+/Users/histakes/Desktop/codingprojects/Calculator365/Calculator365Test/obj/Debug/net8.0/Calculator365Test.csproj.AssemblyReference.cache
+/Users/histakes/Desktop/codingprojects/Calculator365/Calculator365Test/obj/Debug/net8.0/Calculator365Test.GeneratedMSBuildEditorConfig.editorconfig
+/Users/histakes/Desktop/codingprojects/Calculator365/Calculator365Test/obj/Debug/net8.0/Calculator365Test.AssemblyInfoInputs.cache
+/Users/histakes/Desktop/codingprojects/Calculator365/Calculator365Test/obj/Debug/net8.0/Calculator365Test.AssemblyInfo.cs
+/Users/histakes/Desktop/codingprojects/Calculator365/Calculator365Test/obj/Debug/net8.0/Calculator365Test.csproj.CoreCompileInputs.cache
+/Users/histakes/Desktop/codingprojects/Calculator365/Calculator365Test/obj/Debug/net8.0/Calculator365Test.sourcelink.json
