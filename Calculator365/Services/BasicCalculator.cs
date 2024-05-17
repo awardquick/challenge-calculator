@@ -10,14 +10,30 @@ namespace Calculator365
             string[] delimiters = [",", "\n"];
             string[] numbers = input.Split(delimiters, StringSplitOptions.None);
 
+            List<double> negativeNumbers = [];
+
             double sum = 0;
 
             foreach (string number in numbers)
             {
                 if (double.TryParse(number, out double parsedNum))
-                    sum += parsedNum;
+                {
+                    if (parsedNum < 0)
+                    {
+                        negativeNumbers.Add(parsedNum);
+                    }
+                    else
+                    {
+                        sum += parsedNum;
+                    }
+                }
                 else
                     sum += 0;
+            }
+
+            if (negativeNumbers.Count != 0)
+            {
+                throw new ArgumentException($"Negatives not allowed: {string.Join(", ", negativeNumbers)}");
             }
             return sum;
         }

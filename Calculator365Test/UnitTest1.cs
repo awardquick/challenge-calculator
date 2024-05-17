@@ -85,5 +85,17 @@ namespace Calculator365.UnitTest
             // Assert
             Assert.That(expected, Is.EqualTo(result));
         }
+        [Test]
+        public void TestNegativeNumbers()
+        {
+            // Arrange
+            string input = "1,-2,3,-4";
+
+
+            // Assert
+            var ex = Assert.Throws<ArgumentException>(() => _calculator.Add(input));
+            StringAssert.Contains("Negatives not allowed: -2, -4", ex.Message);
+        }
+
     }
 }
