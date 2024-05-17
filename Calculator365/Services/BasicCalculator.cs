@@ -22,7 +22,7 @@ namespace Calculator365
                     {
                         negativeNumbers.Add(parsedNum);
                     }
-                    else
+                    else if (parsedNum <= 1000)
                     {
                         sum += parsedNum;
                     }

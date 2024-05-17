@@ -97,5 +97,18 @@ namespace Calculator365.UnitTest
             StringAssert.Contains("Negatives not allowed: -2, -4", ex.Message);
         }
 
+        [Test]
+        public void TestNumbersGreaterThan1000()
+        {
+            // Arrange
+            string input = "2,1001,6";
+            double expected = 8;
+
+            // Act
+            double result = _calculator.Add(input);
+
+            // Assert
+            Assert.That(expected, Is.EqualTo(result));
+        }
     }
 }
