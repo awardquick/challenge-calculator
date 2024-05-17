@@ -110,5 +110,19 @@ namespace Calculator365.UnitTest
             // Assert
             Assert.That(expected, Is.EqualTo(result));
         }
+
+        [Test]
+        public void TestCustomDelimiter()
+        {
+            // Arrange
+            string input = "//#\n2#5";
+            double expected = 7;
+
+            // Act
+            double result = _calculator.Add(input);
+
+            // Assert
+            Assert.That(expected, Is.EqualTo(result));
+        }
     }
 }

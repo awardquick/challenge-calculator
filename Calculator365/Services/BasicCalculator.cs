@@ -8,6 +8,17 @@ namespace Calculator365
                 return 0;
 
             string[] delimiters = [",", "\n"];
+
+            if (input.StartsWith("//"))
+            {
+                int delimiterIndex = input.IndexOf('\n');
+                string customDelimiter = input[2..delimiterIndex];
+
+                delimiters = [customDelimiter];
+
+                input = input[(delimiterIndex + 1)..];
+            }
+
             string[] numbers = input.Split(delimiters, StringSplitOptions.None);
 
             List<double> negativeNumbers = [];
