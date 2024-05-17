@@ -7,17 +7,7 @@ namespace Calculator365
             if (string.IsNullOrWhiteSpace(input))
                 return 0;
 
-            string[] delimiters = [",", "\n"];
-
-            if (input.StartsWith("//"))
-            {
-                int delimiterIndex = input.IndexOf('\n');
-                string customDelimiter = input[2..delimiterIndex];
-
-                delimiters = [customDelimiter];
-
-                input = input[(delimiterIndex + 1)..];
-            }
+            string[] delimiters = GetDelimiters(ref input);
 
             string[] numbers = input.Split(delimiters, StringSplitOptions.None);
 
@@ -48,5 +38,37 @@ namespace Calculator365
             }
             return sum;
         }
+
+        private static string[] GetDelimiters(ref string input)
+        {
+            string[] delimiters = [",", "\n"]; // Default delimiters
+
+            if (input.StartsWith("//"))
+            {
+                int delimiterEndIndex = input.IndexOf('\n');
+                if (delimiterEndIndex == -1)
+                {
+                    throw new ArgumentException("Invalid custom delimiter format");
+                }
+                string delimiterSegment = input[2..delimiterEndIndex];
+
+                if (delimiterSegment.StartsWith('[') && delimiterSegment.EndsWith(']'))
+                {
+                    // Custom delimiter enclosed within square brackets
+                    string customDelimiter = delimiterSegment[1..^1];
+                    delimiters = [customDelimiter, "\n"];
+                }
+                else
+                {
+                    // Custom delimiter without square brackets
+                    delimiters = [delimiterSegment, "\n"];
+                }
+
+                input = input[(delimiterEndIndex + 1)..];
+            }
+
+            return delimiters;
+        }
+
     }
 }
