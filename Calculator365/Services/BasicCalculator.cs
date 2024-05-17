@@ -7,7 +7,8 @@ namespace Calculator365
             if (string.IsNullOrWhiteSpace(input))
                 return 0;
 
-            string[] numbers = input.Split(',');
+            string[] delimiters = [",", "\n"];
+            string[] numbers = input.Split(delimiters, StringSplitOptions.None);
 
             double sum = 0;
 

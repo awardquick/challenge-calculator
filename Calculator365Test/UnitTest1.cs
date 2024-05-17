@@ -71,5 +71,19 @@ namespace Calculator365.UnitTest
             // Assert
             Assert.That(expected, Is.EqualTo(result));
         }
+
+        [Test]
+        public void TestNewLineDelimiter()
+        {
+            // Arrange
+            string input = "1\n2,3";
+            double expected = 6;
+
+            // Act
+            double result = _calculator.Add(input);
+
+            // Assert
+            Assert.That(expected, Is.EqualTo(result));
+        }
     }
 }
