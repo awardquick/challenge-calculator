@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/histakes/Desktop/codingprojects/Calculator365/Calculator365Test/Calculator365Test.csproj": {}
+    "/Users/histakes/Desktop/codingprojects/Calculator365Challenge/Calculator365Test/Calculator365Test.csproj": {}
   },
   "projects": {
-    "/Users/histakes/Desktop/codingprojects/Calculator365/Calculator365/Calculator365.csproj": {
+    "/Users/histakes/Desktop/codingprojects/Calculator365Challenge/Calculator365/Calculator365.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/histakes/Desktop/codingprojects/Calculator365/Calculator365/Calculator365.csproj",
+        "projectUniqueName": "/Users/histakes/Desktop/codingprojects/Calculator365Challenge/Calculator365/Calculator365.csproj",
         "projectName": "Calculator365",
-        "projectPath": "/Users/histakes/Desktop/codingprojects/Calculator365/Calculator365/Calculator365.csproj",
+        "projectPath": "/Users/histakes/Desktop/codingprojects/Calculator365Challenge/Calculator365/Calculator365.csproj",
         "packagesPath": "/Users/histakes/.nuget/packages/",
-        "outputPath": "/Users/histakes/Desktop/codingprojects/Calculator365/Calculator365/obj/",
+        "outputPath": "/Users/histakes/Desktop/codingprojects/Calculator365Challenge/Calculator365/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/histakes/.nuget/NuGet/NuGet.Config"
@@ -43,9 +43,13 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.8.0, )"
+            },
             "NUnit": {
               "target": "Package",
-              "version": "[4.1.0, )"
+              "version": "[3.14.0, )"
             },
             "NUnit3TestAdapter": {
               "target": "Package",
@@ -72,14 +76,14 @@
         }
       }
     },
-    "/Users/histakes/Desktop/codingprojects/Calculator365/Calculator365Test/Calculator365Test.csproj": {
+    "/Users/histakes/Desktop/codingprojects/Calculator365Challenge/Calculator365Test/Calculator365Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/histakes/Desktop/codingprojects/Calculator365/Calculator365Test/Calculator365Test.csproj",
+        "projectUniqueName": "/Users/histakes/Desktop/codingprojects/Calculator365Challenge/Calculator365Test/Calculator365Test.csproj",
         "projectName": "Calculator365Test",
-        "projectPath": "/Users/histakes/Desktop/codingprojects/Calculator365/Calculator365Test/Calculator365Test.csproj",
+        "projectPath": "/Users/histakes/Desktop/codingprojects/Calculator365Challenge/Calculator365Test/Calculator365Test.csproj",
         "packagesPath": "/Users/histakes/.nuget/packages/",
-        "outputPath": "/Users/histakes/Desktop/codingprojects/Calculator365/Calculator365Test/obj/",
+        "outputPath": "/Users/histakes/Desktop/codingprojects/Calculator365Challenge/Calculator365Test/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/histakes/.nuget/NuGet/NuGet.Config"
@@ -94,8 +98,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/histakes/Desktop/codingprojects/Calculator365/Calculator365/Calculator365.csproj": {
-                "projectPath": "/Users/histakes/Desktop/codingprojects/Calculator365/Calculator365/Calculator365.csproj"
+              "/Users/histakes/Desktop/codingprojects/Calculator365Challenge/Calculator365/Calculator365.csproj": {
+                "projectPath": "/Users/histakes/Desktop/codingprojects/Calculator365Challenge/Calculator365/Calculator365.csproj"
               }
             }
           }
@@ -121,7 +125,7 @@
             },
             "NUnit": {
               "target": "Package",
-              "version": "[4.1.0, )"
+              "version": "[3.14.0, )"
             },
             "NUnit.Analyzers": {
               "target": "Package",

@@ -1,17 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "kwx7r8wi884toyklEgPPbRmYEGAE6RkH0dyZgNCrRDH9gWMR+YYYEo8uaLVsK1ykaoXafDxqBio9fIaVh1mO/g==",
+  "dgSpecHash": "GzVycxp7WhEJgZM+UEjqQDf2GuDnpBr25fFZ7gAPGqsF6BGzXBRSsaB1x5+oS1o6uV0PXnHC+F3oksXJijafFg==",
   "success": true,
-  "projectFilePath": "/Users/histakes/Desktop/codingprojects/Calculator365/Calculator365Test/Calculator365Test.csproj",
+  "projectFilePath": "/Users/histakes/Desktop/codingprojects/Calculator365Challenge/Calculator365Test/Calculator365Test.csproj",
   "expectedPackageFiles": [
     "/Users/histakes/.nuget/packages/coverlet.collector/6.0.0/coverlet.collector.6.0.0.nupkg.sha512",
     "/Users/histakes/.nuget/packages/microsoft.codecoverage/17.8.0/microsoft.codecoverage.17.8.0.nupkg.sha512",
     "/Users/histakes/.nuget/packages/microsoft.net.test.sdk/17.8.0/microsoft.net.test.sdk.17.8.0.nupkg.sha512",
+    "/Users/histakes/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "/Users/histakes/.nuget/packages/microsoft.testplatform.objectmodel/17.8.0/microsoft.testplatform.objectmodel.17.8.0.nupkg.sha512",
     "/Users/histakes/.nuget/packages/microsoft.testplatform.testhost/17.8.0/microsoft.testplatform.testhost.17.8.0.nupkg.sha512",
+    "/Users/histakes/.nuget/packages/netstandard.library/2.0.0/netstandard.library.2.0.0.nupkg.sha512",
     "/Users/histakes/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
     "/Users/histakes/.nuget/packages/nuget.frameworks/6.5.0/nuget.frameworks.6.5.0.nupkg.sha512",
-    "/Users/histakes/.nuget/packages/nunit/4.1.0/nunit.4.1.0.nupkg.sha512",
+    "/Users/histakes/.nuget/packages/nunit/3.14.0/nunit.3.14.0.nupkg.sha512",
     "/Users/histakes/.nuget/packages/nunit.analyzers/3.9.0/nunit.analyzers.3.9.0.nupkg.sha512",
     "/Users/histakes/.nuget/packages/nunit3testadapter/4.5.0/nunit3testadapter.4.5.0.nupkg.sha512",
     "/Users/histakes/.nuget/packages/system.reflection.metadata/1.6.0/system.reflection.metadata.1.6.0.nupkg.sha512"

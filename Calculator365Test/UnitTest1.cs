@@ -1,6 +1,4 @@
-using NUnit.Framework;
-using Calculator365;
-using System;
+
 
 namespace Calculator365.UnitTest
 {
@@ -26,14 +24,14 @@ namespace Calculator365.UnitTest
             double result = _calculator.Add(input);
 
             // Assert
-            Assert.AreEqual(expected, result);
+            Assert.That(expected, Is.EqualTo(result));
         }
         [Test]
         public void TestInvalidInput()
         {
             string input = "5, tytyt";
             double expected = 5;
-            Assert.AreEqual(expected, _calculator.Add(input));
+            Assert.That(expected, Is.EqualTo(_calculator.Add(input)));
         }
 
         [Test]
@@ -57,7 +55,7 @@ namespace Calculator365.UnitTest
             double result = _calculator.Add(input);
 
             // Assert
-            Assert.AreEqual(expected, result);
+            Assert.That(expected, Is.EqualTo(result));
         }
 
         [Test]
@@ -71,7 +69,7 @@ namespace Calculator365.UnitTest
             double result = _calculator.Add(input);
 
             // Assert
-            Assert.AreEqual(expected, result);
+            Assert.That(expected, Is.EqualTo(result));
         }
     }
 }
