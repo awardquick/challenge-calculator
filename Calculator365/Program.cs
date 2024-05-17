@@ -8,28 +8,31 @@ class Program
 
         Console.WriteLine("Welcome to Calculator365!");
         Console.WriteLine("Enter a list of numbers separated by commas or newlines to add them up.");
+        Console.WriteLine("Press Ctrl+C to exit.");
 
-        string? input = Console.ReadLine();
-        double result;
-
-        try
+        while (true)
         {
-            if (input != null)
+            string? input = Console.ReadLine();
+            double result;
+
+            try
             {
-                result = calculator.Add(input);
+                if (input != null)
+                {
+                    result = calculator.Add(input);
+                    Console.WriteLine($"Result: {result}");
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input. Please try again.");
+                    return;
+                }
             }
-            else
+            catch (ArgumentException ex)
             {
-                Console.WriteLine("Invalid input. Please try again.");
+                Console.WriteLine(ex.Message);
                 return;
             }
         }
-        catch (ArgumentException ex)
-        {
-            Console.WriteLine(ex.Message);
-            return;
-        }
-
-        Console.WriteLine($"Result: {result}");
     }
 }
