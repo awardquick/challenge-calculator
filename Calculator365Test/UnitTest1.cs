@@ -138,5 +138,19 @@ namespace Calculator365.UnitTest
             // Assert
             Assert.That(expected, Is.EqualTo(result));
         }
+
+        [Test]
+        public void TestMultipleCustomDelimiters()
+        {
+            // Arrange
+            string input = "//[*][!!][r9r]\n11r9r22*33!!44";
+            double expected = 110;
+
+            // Act
+            double result = _calculator.Add(input);
+
+            // Assert
+            Assert.That(expected, Is.EqualTo(result));
+        }
     }
 }

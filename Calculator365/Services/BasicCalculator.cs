@@ -7,37 +7,28 @@ namespace Calculator365
             if (string.IsNullOrWhiteSpace(input))
                 return 0;
 
-            string[] delimiters = GetDelimiters(ref input);
+            var delimiters = GetDelimiters(ref input);
+            var numbers = GetNumbers(input, delimiters);
+            ValidateNumbers(numbers);
 
-            string[] numbers = input.Split(delimiters, StringSplitOptions.None);
+            return numbers.Sum();
+        }
 
-            List<double> negativeNumbers = [];
+        private IEnumerable<double> GetNumbers(string input, string[] delimiters)
+        {
+            return input.Split(delimiters, StringSplitOptions.None)
+                .Select(n => double.TryParse(n, out var num) ? (num <= 1000 ? num : 0) : 0);
+        }
 
-            double sum = 0;
-
-            foreach (string number in numbers)
-            {
-                if (double.TryParse(number, out double parsedNum))
-                {
-                    if (parsedNum < 0)
-                    {
-                        negativeNumbers.Add(parsedNum);
-                    }
-                    else if (parsedNum <= 1000)
-                    {
-                        sum += parsedNum;
-                    }
-                }
-                else
-                    sum += 0;
-            }
-
-            if (negativeNumbers.Count != 0)
+        private static void ValidateNumbers(IEnumerable<double> numbers)
+        {
+            var negativeNumbers = numbers.Where(n => n < 0);
+            if (negativeNumbers.Any())
             {
                 throw new ArgumentException($"Negatives not allowed: {string.Join(", ", negativeNumbers)}");
             }
-            return sum;
         }
+
 
         private static string[] GetDelimiters(ref string input)
         {
@@ -55,8 +46,8 @@ namespace Calculator365
                 if (delimiterSegment.StartsWith('[') && delimiterSegment.EndsWith(']'))
                 {
                     // Custom delimiter enclosed within square brackets
-                    string customDelimiter = delimiterSegment[1..^1];
-                    delimiters = [customDelimiter, "\n"];
+                    string[] customDelimiters = delimiterSegment[1..^1].Split("][");
+                    delimiters = [.. customDelimiters, "\n"];
                 }
                 else
                 {
