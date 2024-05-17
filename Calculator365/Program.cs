@@ -7,7 +7,7 @@ class Program
         ICalculator calculator = new BasicCalculator();
 
         Console.WriteLine("Welcome to Calculator365!");
-        Console.WriteLine("Enter two numbers separated by a comma to add them together.");
+        Console.WriteLine("Enter a list of numbers separated by commas or newlines to add them up.");
 
         string? input = Console.ReadLine();
         double result;
